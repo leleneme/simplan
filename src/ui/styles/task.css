@@ -1,0 +1,35 @@
+.task {
+    display: flex;
+    align-items: center;
+    padding: 12px 10px;
+    border: 1px solid var(--colors-background-soft);
+    border-radius: var(--border-radius);
+
+    animation: pop-in var(--transition-time);
+    transition: background-color var(--transition-time);
+}
+
+.task:hover {
+    background-color: var(--colors-background-soft);
+}
+
+.task input {
+    appearance: none;
+    margin: 0;
+    margin-right: 10px;
+    width: 1.15em;
+    height: 1.15em;
+    border: 1px solid currentColor;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    position: relative;
+}
+
+.task input:checked {
+    background-color: pink;
+    border: none;
+}
+
+.task button {
+    margin-left: auto;
+}

@@ -1,0 +1,62 @@
+:root {
+  color-scheme: light dark;
+  hanging-punctuation: first allow-end;
+}
+
+:root {
+  --colors-background-hard: #0b0b11;
+  --colors-backdrop: rgba(11, 11, 17, 0.8);
+  --colors-background-soft: #15161b;
+
+  --colors-text-hard: #ffffff;
+  --colors-text-soft: #b0b0b2;
+
+  --transition-time: 0.25s;
+  --border-radius: 4px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--colors-background-hard) !important;
+  color: var(--colors-text-hard);
+
+  font-family: system-ui, sans-serif;
+
+  margin: 0;
+  padding: 0;
+
+  font-size: 18px;
+}
+
+button {
+  all: unset;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+@keyframes pop-in {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

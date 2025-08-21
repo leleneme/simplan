@@ -1,0 +1,30 @@
+.input-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.input-wrapper input {
+    border: 1px solid var(--colors-background-soft);
+    border-radius: var(--border-radius);
+    background: none;
+    outline: none;
+    font-size: inherit;
+    color: var(--colors-text-soft);
+    padding: 5px 8px;
+    flex: 1;
+}
+
+.input-wrapper button {
+    width: 30px;
+    height: 30px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--colors-background-soft);
+    transition: background-color var(--transition-time);
+}
+
+.input-wrapper button:hover {
+    background-color: var(--colors-background-soft);
+}

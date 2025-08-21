@@ -1,0 +1,93 @@
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--colors-backdrop);
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  z-index: 2;
+}
+
+.dialog {
+  margin-top: 30px;
+  max-width: 400px;
+
+  background: var(--colors-background-hard);
+  border: 1px solid var(--colors-background-soft);
+  border-radius: var(--border-radius);
+
+  animation: pop-in var(--transition-time);
+  padding: 18px 18px;
+}
+
+.dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.dialog-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--colors-text-hard);
+}
+
+.dialog-close {
+  cursor: pointer;
+  padding: 4px;
+  border-radius: var(--border-radius);
+  color: var(--colors-text-soft);
+  transition: background-color var(--transition-time);
+}
+
+.dialog-close:hover {
+  background-color: var(--colors-background-soft);
+}
+
+.dialog-content p {
+  line-height: 1.5;
+  color: var(--colors-text-soft);
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.dialog-button {
+  padding: 8px 8px;
+  border: 1px solid var(--colors-background-soft);
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--transition-time);
+  min-width: 90px;
+  color: var(--colors-text-soft);
+}
+
+.dialog-button-ok,
+.dialog-button-confirm {
+  color: var(--colors-text-hard);
+  background-color: var(--colors-background-soft);
+}
+
+.dialog-button-ok:hover,
+.dialog-button-confirm:hover {
+  background-color: color-mix(in hsl, var(--colors-background-soft), white 3%);
+}
+
+.dialog-button-cancel {
+  color: var(--colors-text-soft);
+}
+
+.dialog-button-cancel:hover {
+  background-color: var(--colors-background-soft);
+}

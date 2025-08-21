@@ -1,0 +1,57 @@
+#root {
+  font-size: 16px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+main {
+  max-width: 455px;
+  width: 100%;
+  padding: 10px 5px;
+}
+
+.task-list {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-list-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task-list-toggle button {
+  border-radius: var(--border-radius);
+  color: var(--colors-text-soft);
+  
+  transition: color var(--transition-time);
+}
+
+.task-list-toggle button:hover {
+  color: var(--colors-text-hard);
+}
+
+.none-message {
+  padding: 10px 0px;
+  text-align: center;
+  color: var(--colors-text-soft);
+  font-style: italic;
+  font-size: 14px;
+}
+
+main > header {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+main > header > span {
+  font-weight: bold;
+  font-size: 18px;
+}
