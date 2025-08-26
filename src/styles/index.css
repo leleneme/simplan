@@ -8,6 +8,8 @@
   --colors-backdrop: rgba(11, 11, 17, 0.8);
   --colors-background-soft: #15161b;
 
+  --colors-input-border-focus: #22242c;
+
   --colors-text-hard: #ffffff;
   --colors-text-soft: #b0b0b2;
 
@@ -51,12 +53,13 @@ h4 {
 }
 
 @keyframes pop-in {
-    from {
-        opacity: 0;
-        transform: scale(0.98);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

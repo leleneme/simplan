@@ -1,13 +1,13 @@
 import { type ChangeEvent, type ReactNode } from 'react';
-import './styles/input.css';
-
 import { MdAdd } from 'react-icons/md';
+import './styles/input.css';
 
 interface InputProps {
   value?: string,
   onValueChange: (value: string) => void,
   placeholder?: string;
   leftSide?: ReactNode;
+  maxLenght?: number;
 }
 
 export function Input(props: InputProps) {
@@ -19,7 +19,13 @@ export function Input(props: InputProps) {
 
   return (
     <div className='input-wrapper'>
-      <input value={props.value} onChange={onChange} type='text' placeholder={props.placeholder} />
+      <input
+        type='text'
+        maxLength={props.maxLenght}
+        placeholder={props.placeholder}
+        value={props.value}
+        onChange={onChange}
+      />
       {props.leftSide}
     </div>
   );
@@ -28,19 +34,20 @@ export function Input(props: InputProps) {
 interface InputButton extends InputProps {
   onButtonClick?: () => void;
   type?: 'submit',
-  size?: number
+  size?: number;
 }
 
 export function InputButton(props: InputButton) {
+  const Button = () => (
+    <button aria-label='Add' type={props.type} onClick={props.onButtonClick}>
+      <MdAdd size={props.size || 24} />
+    </button>
+  );
+
   return (
     <Input
-      value={props.value}
-      placeholder={props.placeholder}
-      onValueChange={props.onValueChange}
-      leftSide={
-        <button aria-label='Add' type={props.type} onClick={props.onButtonClick}>
-          <MdAdd size={props.size || 24} />
-        </button>}
+      {...props}
+      leftSide={<Button />}
     />
   );
 }

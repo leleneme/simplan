@@ -15,6 +15,11 @@
     color: var(--colors-text-soft);
     padding: 5px 8px;
     flex: 1;
+    transition: border-color var(--transition-time);
+}
+
+.input-wrapper input:focus {
+    border-color: var(--colors-input-border-focus);
 }
 
 .input-wrapper button {

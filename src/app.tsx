@@ -66,6 +66,12 @@ function App() {
     const newTask = todoText.trim();
     if (!newTask) return;
 
+    if (newTask.length > 300) {
+      await openDialog('alert', 'Task is too long!',
+        'The maximum number of allowed characters is 300.');
+      return;
+    }
+
     if (!projectId) {
       await openDialog('alert', 'No Project', 'Please select a project first.');
       return;
@@ -137,6 +143,7 @@ function App() {
 
       <form onSubmit={handleSubmit}>
         <InputButton
+          maxLenght={300}
           type='submit'
           placeholder='New task...'
           value={todoText}

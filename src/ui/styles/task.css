@@ -23,6 +23,7 @@
     border-radius: var(--border-radius);
     cursor: pointer;
     position: relative;
+    flex-shrink: 0;
 }
 
 .task input:checked {
@@ -32,4 +33,10 @@
 
 .task button {
     margin-left: auto;
+}
+
+.task p {
+    overflow: hidden;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
